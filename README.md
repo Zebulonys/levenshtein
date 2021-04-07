@@ -22,3 +22,7 @@ I chose to use a recursive implementation :
             levenshtein(a.substr(1), b.substr(1)) + indicator   //Substitution
         );
     |end
+
+# Tests
+
+The test are from the website oldfashionedsoftware.com (https://oldfashionedsoftware.com/tag/levenshtein-distance/)
