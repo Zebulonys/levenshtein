@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+__authors__ = "Stéphane Gabillon"
+
 from levenshtein import levenshtein
 
 print("***** Begin ******\n")
