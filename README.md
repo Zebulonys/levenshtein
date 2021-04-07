@@ -6,19 +6,19 @@ In information theory, linguistics, and computer science, the Levenshtein distan
 
 I chose to use a recursive implementation : 
 
-| Function levenshtein(a,b) is
-    |if a.size() == 0 then
-        |return b.size()
-    |end
-    |if b.size() == 0 then
-        |return a.size()
-    |end
+    | Function levenshtein(a,b) is
+        |if a.size() == 0 then
+            |return b.size()
+        |end
+        |if b.size() == 0 then
+            |return a.size()
+        |end
 
-    |indicator <-- a[0] != b[0] ? 1 : 0;
-    
-    |return Minimum(
-        levenshtein(a.substr(1),b) + 1,                     //Deletion
-        levenshtein(b.substr(1),a) + 1,                     //Insertion
-        levenshtein(a.substr(1), b.substr(1)) + indicator   //Substitution
-    );
-|end
+        |indicator <-- a[0] != b[0] ? 1 : 0;
+        
+        |return Minimum(
+            levenshtein(a.substr(1),b) + 1,                     //Deletion
+            levenshtein(b.substr(1),a) + 1,                     //Insertion
+            levenshtein(a.substr(1), b.substr(1)) + indicator   //Substitution
+        );
+    |end
